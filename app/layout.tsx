@@ -16,12 +16,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container flex items-center justify-between py-3">
             <Link href="/" className="flex items-center gap-3">
   <Image
-    src="/uploads/bmw_clemson_lockup.png"   // ← use your filename
-    alt="BMW × Clemson"
-    width={120} height={32}                  // safe default; adjust as needed
-    className="h-8 w-auto"
-    priority
-  />
+  src="/uploads/bmw_clemson_lockup.png"
+  alt="BMW × Clemson"
+  width={240}            // fallback size (can leave as-is)
+  height={64}
+  className="h-10 md:h-12 lg:h-14 w-auto rounded-md ring-1 ring-white/10"
+  priority
+  sizes="(max-width: 768px) 160px, (max-width: 1024px) 200px, 240px"
+/>
+
   <span className="sr-only">BMW × Clemson</span>
 </Link>
             <div className="flex items-center gap-6 text-sm">
