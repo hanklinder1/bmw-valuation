@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -13,10 +14,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen">
         <nav className="sticky top-0 z-50 backdrop-blur bg-black/40 border-b border-white/10">
           <div className="container flex items-center justify-between py-3">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-brand" />
-              <span className="font-semibold">BMW × Clemson</span>
-            </Link>
+            <Link href="/" className="flex items-center gap-3">
+  <Image
+    src="/uploads/bmw_clemson_lockup.png"   // ← use your filename
+    alt="BMW × Clemson"
+    width={120} height={32}                  // safe default; adjust as needed
+    className="h-8 w-auto"
+    priority
+  />
+  <span className="sr-only">BMW × Clemson</span>
+</Link>
             <div className="flex items-center gap-6 text-sm">
               <Link href="/cost" className="hover:text-brand">Cost</Link>
               <Link href="/benefit" className="hover:text-brand">Benefit</Link>
