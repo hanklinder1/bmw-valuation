@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     src="/uploads/bmw_clemson_lockup.png"   // ← use your filename
     alt="BMW × Clemson"
     width={333} height={83}                  // safe default; adjust as needed
-    className="className="h-9 w-auto"
+    className="className="h-8 w-auto"
 "
     priority
   />
