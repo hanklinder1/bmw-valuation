@@ -96,7 +96,7 @@ export default function CostPage() {
   {/* BIG charts below */}
   <div className="mt-6 space-y-8">
     <figure className="mx-auto max-w-5xl">
-      <Image src="/uploads/coef_plot.png" alt="Coefficient plot" width={1920} height={1080}
+      <Image src="/uploads/coef_plot.png" alt="Coefficient plot" width={1500} height={844}
              className="w-full h-auto rounded-2xl shadow-xl" />
       <figcaption className="mt-2 text-center text-white/70 text-sm">
         Standardized coefficients with 95% confidence intervals
@@ -104,7 +104,7 @@ export default function CostPage() {
     </figure>
 
     <figure className="mx-auto max-w-5xl">
-      <Image src="/uploads/residuals.png" alt="Residual diagnostics" width={1920} height={1080}
+      <Image src="/uploads/residuals.png" alt="Residual diagnostics" width={1500} height={844}
              className="w-full h-auto rounded-2xl shadow-xl" />
       <figcaption className="mt-2 text-center text-white/70 text-sm">
         Residuals vs fitted and QQ plot (diagnostics)
