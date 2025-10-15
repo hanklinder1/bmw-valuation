@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import Gallery from '@/components/Gallery'
@@ -80,29 +81,43 @@ export default function CostPage() {
 
       {/* 3) Statistical tests */}
       <Section title="3) Statistical Tests — Significance of Drivers">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <p className="text-white/80">
-              We run OLS on simulated (and later observed) outcomes to test which coefficients materially
-              impact cost exposure (e.g., storage rate, annotation time, security half-life). We report
-              coefficients, standard errors, and p-values to separate signal from noise.
-            </p>
-            <ul className="list-disc ml-6 text-white/75 mt-3 space-y-1">
-              <li>Spec: cost ~ cTB + alpha + beta_ops + eta + L_breach (+ interactions)</li>
-              <li>Outputs: β̂, SE(β̂), t-stats, p-values, adj. R²</li>
-              <li>Use: focus data collection/negotiation on high-significance levers</li>
-            </ul>
-          </div>
-          <div>
-            <Gallery
-              images={[
-                { src: '/uploads/coef_plot.png', caption: 'Coefficient plot with 95% CIs' },
-                { src: '/uploads/residuals.png', caption: 'Residual diagnostics (normality/heteroskedasticity checks)' }
-              ]}
-            />
-          </div>
-        </div>
-      </Section>
+  <p className="text-white/80">
+    We run OLS on simulated (and later observed) outcomes to test which coefficients materially
+    impact cost exposure (e.g., storage rate, annotation time, security half-life). We report
+    coefficients, standard errors, and p-values to separate signal from noise.
+  </p>
+
+  <ul className="list-disc ml-6 text-white/75 mt-3 space-y-1">
+    <li>Spec: cost ~ cTB + alpha + beta_ops + eta + L_breach (+ interactions)</li>
+    <li>Outputs: β̂, SE(β̂), t-stats, p-values, adj. R²</li>
+    <li>Use: focus data collection/negotiation on high-significance levers</li>
+  </ul>
+
+  {/* BIG charts below */}
+  <div className="mt-6 space-y-8">
+    <figure className="mx-auto max-w-5xl">
+      <Image src="/uploads/coef_plot.png" alt="Coefficient plot" width={1920} height={1080}
+             className="w-full h-auto rounded-2xl shadow-xl" />
+      <figcaption className="mt-2 text-center text-white/70 text-sm">
+        Standardized coefficients with 95% confidence intervals
+      </figcaption>
+    </figure>
+
+    <figure className="mx-auto max-w-5xl">
+      <Image src="/uploads/residuals.png" alt="Residual diagnostics" width={1920} height={1080}
+             className="w-full h-auto rounded-2xl shadow-xl" />
+      <figcaption className="mt-2 text-center text-white/70 text-sm">
+        Residuals vs fitted and QQ plot (diagnostics)
+      </figcaption>
+    </figure>
+  </div>
+
+  <div className="mt-4 flex items-center gap-4">
+    <a href="/uploads/ols_results.csv" className="text-brand underline">Regression table (CSV)</a>
+    <a href="/uploads/vif.csv" className="text-brand underline">Multicollinearity (VIF) CSV</a>
+  </div>
+</Section>
+
 
       {/* Methodology details */}
       <Section title="Scraping & Curation Method (Summary)">
