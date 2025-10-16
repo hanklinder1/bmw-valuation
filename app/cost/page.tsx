@@ -8,20 +8,19 @@ export default function CostPage() {
   return (
     <>
       <Hero
-        title="Cost — Dataset Risk & Cost Modeling"
-        subtitle="We triangulate cost exposure using (1) an industry leak/lawsuit database, (2) Monte Carlo simulation over realistic ranges, and (3) statistical tests to validate drivers."
-      />
+        title="Cost – Dataset Risk & Cost Modeling"
+        subtitle="We triangulate cost exposure using (1) an industry leak/lawsuit database, (2) Monte Carlo simulation over sensor outcomes, and (3) cost structures in manufacturing data labeling."
+      /> {/* Executive summary bullets */}
 
-      {/* Executive summary bullets */}
       <Section title="What we’re showing today (TL;DR)">
         <ul className="list-disc ml-6 text-white/85 space-y-2">
           <li><b>Lawsuit/Leak Database:</b> benchmarks for downside risk.</li>
-          <li><b>Monte Carlo Simulation:</b> ranges → P50/P90 monthly cost.</li>
-          <li><b>Statistical Tests:</b> which drivers matter (significance).</li>
+          {/* Add more list items here */}
         </ul>
       </Section>
-
-      {/* keep the rest of your sections below... */}
+    </>
+  );
+}
 
       {/* 1) Lawsuit/Leak DB */}
       <Section title="1) Lawsuit / Leak Database (Automotive & Adjacent)">
