@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import Hero from '@/components/Hero'
 import Section from '@/components/Section'
 import Gallery from '@/components/Gallery'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function CostPage() {
   return (
@@ -15,19 +15,13 @@ export default function CostPage() {
       {/* Executive summary bullets */}
       <Section title="What we’re showing today (TL;DR)">
         <ul className="list-disc ml-6 text-white/85 space-y-2">
-          <li>
-            <b>Lawsuit/Leak Database:</b> curated cases from automotive & adjacent industries with amounts,
-            type, and context to benchmark downside risk.
-          </li>
-          <li>
-            <b>Monte Carlo Simulation:</b> converts single inputs to <i>ranges</i> (min/likely/max) and
-            runs thousands of draws to produce P50/P90 monthly cost.
-          </li>
-          <li>
-            <b>Statistical Tests:</b> regression and significance checks on candidate cost/risk drivers.
-          </li>
+          <li><b>Lawsuit/Leak Database:</b> benchmarks for downside risk.</li>
+          <li><b>Monte Carlo Simulation:</b> ranges → P50/P90 monthly cost.</li>
+          <li><b>Statistical Tests:</b> which drivers matter (significance).</li>
         </ul>
       </Section>
+
+      {/* keep the rest of your sections below... */}
 
       {/* 1) Lawsuit/Leak DB */}
       <Section title="1) Lawsuit / Leak Database (Automotive & Adjacent)">
