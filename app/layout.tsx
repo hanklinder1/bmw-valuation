@@ -15,15 +15,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <nav className="sticky top-0 z-50 backdrop-blur bg-black/40 border-b border-white/10">
           <div className="container flex items-center justify-between py-3">
             <Link href="/" className="flex items-center gap-3">
-  <Image
-  src="/uploads/bmw_clemson_lockup.png"
-  alt="BMW × Clemson"
-  width={240}            // fallback size (can leave as-is)
-  height={64}
-  className="h-10 md:h-12 lg:h-14 w-auto rounded-md ring-1 ring-white/10"
-  priority
-  sizes="(max-width: 768px) 160px, (max-width: 1024px) 200px, 240px"
-/>
+  <Link href="/" className="flex items-center gap-3 md:gap-4">
+  <div className="inline-flex items-center rounded-md bg-white p-1 ring-1 ring-white/10">
+    <Image
+      src="/uploads/bmw_clemson_lockup.png"
+      alt="BMW × Clemson"
+      width={240}
+      height={64}
+      className="h-10 md:h-12 lg:h-14 w-auto"
+      priority
+      sizes="(max-width: 768px) 160px, (max-width: 1024px) 200px, 240px"
+    />
+  </div>
+  <span className="sr-only">BMW × Clemson</span>
+</Link>
 
   <span className="sr-only">BMW × Clemson</span>
 </Link>
