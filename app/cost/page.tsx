@@ -52,12 +52,12 @@ export default function CostPage() {
           <div>
             <Gallery
   images={[
+    { src: '/uploads/leak_hist.png',       caption: 'Leak / lawsuit amounts (illustrative bins)' },
+    { src: '/uploads/leak_box.png',        caption: 'Box/whisker by industry proximity' },
     { src: '/uploads/leak_timeline.png',   caption: 'Trend over time (counts or $ amounts)' },
     { src: '/uploads/leak_by_type.png',    caption: 'Cases / amounts by leak type' }
   ]}
 />
-
-
       {/* 2) Monte Carlo */}
       <Section title="2) Monte Carlo — Monthly Cost Distribution">
         <p className="text-white/80 mb-4">
